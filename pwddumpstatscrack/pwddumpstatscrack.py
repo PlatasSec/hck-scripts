@@ -48,15 +48,15 @@ def createFilesForCracking():
         with open(fileWithRepeatedPass, 'w') as newFileRepeated:
             for record in userRepeatedPass:
                 newFileRepeated.write("%s\n" % record[0])
-            print('File with %i repeated passwords has been successfully created --> "%s"' % (len(userRepeatedPass),fileWithRepeatedPass))
+            print('File with %i repeated passwords has been successfully created --> "%s".' % (len(userRepeatedPass),fileWithRepeatedPass))
 
         with open(fileWithUniquePass, 'w') as newFileUnique:
             for record in finalUniqueUsersRecords:
                 newFileUnique.write("%s\n" % record[0])
-            print('File with %i unique passwords has been successfully created --> "%s' % (len(finalUniqueUsersRecords),fileWithUniquePass))
+            print('File with %i unique passwords has been successfully created --> "%s".' % (len(finalUniqueUsersRecords),fileWithUniquePass))
 
 def printFinalStats():
-    print("\n**** Final stats:")
+    print('\n**** Final stats:')
 
     if os.path.exists(outputFileWithRepeatedCrackedPass):
             with open(outputFileWithRepeatedCrackedPass, 'r') as file:
@@ -77,7 +77,7 @@ def printFinalStats():
         print('--> 0/%i unique passwords were cracked.' % len(finalUniqueUsersRecords))
 
 def crackRepeatedPasswords():
-    print("\n**** Cracking the repeated passwords...")
+    print('\n**** Cracking the repeated passwords...')
 
     subprocess.run(["hashcat", "-m", str(hashcatHashMode), "-a", "0",
                                 fileWithRepeatedPass, dictionaryList, "-o", outputFileWithRepeatedCrackedPass])
@@ -86,11 +86,11 @@ def crackRepeatedPasswords():
         with open(outputFileWithRepeatedCrackedPass, 'r') as file:
             passwordsCracked = len(file.readlines())
             if passwordsCracked > 0:
-                print("--> A total of %i repeated passwords have been cracked successfully. Check the results in %s."%(len(file.readlines()),outputFileWithRepeatedCrackedPass))
+                print('--> A total of %i repeated passwords have been cracked successfully. Check the results in "%s."'%(len(file.readlines()),outputFileWithRepeatedCrackedPass))
             else:
-                print("--> No repeated passwords were cracked.")
+                print('--> No repeated passwords were cracked.')
     else:
-        print("--> No repeated passwords were cracked.")
+        print('--> No repeated passwords were cracked.')
 
 def crackUniquePasswords():
         print("\n**** Cracking the unique passwords...")
@@ -154,7 +154,7 @@ with open(usersPathFile, newline='') as csvfile:
         if(getUsersWithSamePassword()):
             print(f'{len(userRepeatedPass)} duplicate passwords have been found!')
             for record in userRepeatedPass:
-                print('--> Password [ %s ] is duplicate %i times and used by [ %s ] usernames.' % (
+                print('--> Password [ %s ] is duplicated %i times and used by [ %s ] usernames.' % (
                     record[0], len(record[1]), ", ".join(record[1])))
             hashcatChecker = subprocess.getstatusoutput('hashcat')
             if hashcatChecker[0] < 0:
