@@ -1,17 +1,15 @@
 # pwddumpstatscrack
 
-This script takes a `.csv` file defined in `usersPathFile` global variable 
+This script takes a `.csv` file defined in the `usersPathFile` global variable 
 that was previously dumped from a database. 
 It reads the file and gets the `user_name` and `user_password` fields 
 discarding the empty passwords to finally create 
 a list with all the valid records. When done, it shows the initial stats 
-of the obtained records.Additionally, it checks 
+of the obtained records. Additionally, it checks 
 if there's any repeated passwords and stores them in a new list. 
 
-Once the initial analysis is finished, the user has to type y/n and press 
-Enter in order to start the process of trying to crack the passwords by 
-using 
-[Hashcat](https://hashcat.net/hashcat0) tool. Firstly, this task starts 
+Once the initial analysis is finished, the user has to confirm to start the process of 
+trying to crack the passwords with [Hashcat](https://hashcat.net/hashcat0) tool. Firstly, this task starts 
 with the repeated passwords since there's a higher 
 probability of them using a default or easy one. Lastly, the process ends 
 with the list of unique passwords and prints the
