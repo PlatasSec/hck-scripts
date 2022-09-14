@@ -41,8 +41,7 @@ names of the output files and hash mode. With their values, it will be
 something 
 as follows:
 ```bash
-$ hashcat -m 3200 -a 0 file_with_unique_passwords.txt 
-/usr/share/wordlists/john.lst -o cracked_unique_passwords.txt
+$ hashcat -m 3200 -a 0 file_with_unique_passwords.txt /usr/share/wordlists/john.lst -o cracked_unique_passwords.txt
 ```
 
 ## Output Example
