@@ -56,51 +56,39 @@ Users with empty password: 752.
 
 **** Checking duplicate passwords...
 2 duplicate passwords have been found!
---> Password [ 
-$2a$10$EKrNWQS/yAOVdXUeI2pn7er3.jbwlLHFI5Yb2KeW6PCA0YSS/ZXUa ] is 
-duplicate 2 times and used by [ peter, jasmine ] usernames.
---> Password [ 
-$2a$10$dhzRkka10e4WgIlQx.VHfOYlF1cefOOd96WHEmevvQsJs8PIgjchO ] is 
-duplicate 3 times and used by [ john, test, charles ] usernames.
+--> Password [ $2a$10$EKrNWQS/yAOVdXUeI2pn7er3.jbwlLHFI5Yb2KeW6PCA0YSS/ZXUa ] is duplicated 2 times and used by [ peter, jasmine ] usernames.
+--> Password [ $2a$10$dhzRkka10e4WgIlQx.VHfOYlF1cefOOd96WHEmevvQsJs8PIgjchO ] is duplicated 3 times and used by [ john, test, charles ] usernames.
 ```
 
 * User confirmation to start cracking
 
 ```
-The file "company_users.csv" has been analised succesfully. Would you like 
-to crack the passwords using Hashcat? (type y/n and press Enter):
+The file "company_users.csv" has been analised succesfully. Would you like to crack the passwords using Hashcat? (type y/n and press Enter):
 ```
 
 * Passwords files creation
 
 ```
 **** Creating passwords files for cracking...
-File with 2 repeated passwords has been successfully created --> 
-"file_with_repeated_passwords.txt"
-File with 6275 unique passwords has been successfully created --> 
-"file_with_unique_passwords.txt"
+File with 2 repeated passwords has been successfully created --> "file_with_repeated_passwords.txt"
+File with 6275 unique passwords has been successfully created --> "file_with_unique_passwords.txt"
 ```
 
 * User confirmation to crack the repeated passwords
 
 ```
-Firstly, I will crack the repeated passwords due to a higher probability 
-of them using a default or easy one.
-If you want to continue please, press Enter.
+Firstly, I will crack the repeated passwords due to a higher probability of them using a default or easy one. If you want to continue please, press Enter.
 ```
 
 * User confirmation to crack the unique passwords
 
 ```
-There is a total of 6275 unique passwords in 
-"file_with_unique_passwords.txt". Please be aware this process can take a 
-long time to complete.
-If you want to continue please, press Enter. 
+There is a total of 6275 unique passwords in "file_with_unique_passwords.txt". Please be aware this process can take a long time to complete. If you want to continue please, press Enter. 
 ```
 
 * Final stats
 
-````
+```
 **** Final stats:
 --> 1/2 repeated passwords were cracked.
 --> 8/6275 unique passwords were cracked.
