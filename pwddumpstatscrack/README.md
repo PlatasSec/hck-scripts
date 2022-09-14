@@ -44,7 +44,7 @@ as follows:
 $ hashcat -m 3200 -a 0 file_with_unique_passwords.txt /usr/share/wordlists/john.lst -o cracked_unique_passwords.txt
 ```
 
-## Output Example
+## Output Example
 
 * Initial stats
 
