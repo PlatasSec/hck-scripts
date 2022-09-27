@@ -15,7 +15,7 @@ it has to be changed if they're different from `email` and `password`.
 # Global variables
 # to be changed
 login_url = "http://your-domain.com/login"
-dictionary_path = "/usr/share/wordlists/rockyou_utf.txt"
+dictionary_path = "/usr/share/wordlists/rockyou.txt"
 
 # function
 def bruteForcePassword():
@@ -30,7 +30,7 @@ def bruteForcePassword():
 ## Output Example
 
 ```
-Brute Forcing:   1%|█                                                                             | 111971/14344392 [01:21<2:53:43, 1365.39it/s]
+Brute Forcing:   1%|█                                       | 111971/14344392 [01:21<2:53:43, 1365.39it/s]
 
 [!] Password found! 
 Credentials: admin:123456
