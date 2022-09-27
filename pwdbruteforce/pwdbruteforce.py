@@ -6,7 +6,7 @@ from tqdm import tqdm
 # Global variables
 # to be changed
 login_url = "http://your-domain.com/login"
-dictionary_path = "/usr/share/wordlists/rockyou_utf.txt"
+dictionary_path = "/usr/share/wordlists/rockyou.txt"
 
 pbar = None
 
