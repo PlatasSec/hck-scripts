@@ -7,10 +7,10 @@ find the correct password through POST requests.
 
 You'll need to have installed python3 in your machine to run the script.
 
-You'll have to update the 2 global variables: `login_url` the login page url you want to attemp the requests to and 
+You'll have to update the 2 global variables: `login_url` the url you want to attemp the requests to and 
 `dictionary_path` is the file which contains the passwords you want to use for the brute-force attack.
 Additionally, the `post_data` variable within `bruteForcePassword` function corresponds to the login fields of the login page and 
-it have to be changed if they're different from `email` and `password`.
+it has to be changed if they're different from `email` and `password`.
 ```python
 # Global variables
 # to be changed
@@ -30,7 +30,7 @@ def bruteForcePassword():
 ## Output Example
 
 ```
-Brute Forcing:   1%|█                                                                                                                                               | 111971/14344392 [01:21<2:53:43, 1365.39it/s]
+Brute Forcing:   1%|█                                                                             | 111971/14344392 [01:21<2:53:43, 1365.39it/s]
 
 [!] Password found! 
 Credentials: admin:123456
